@@ -25,6 +25,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#previews">Previews</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -56,6 +57,61 @@
             developer tooling, and behavioral-health tech. My background spans NLP and agentic systems, full-stack delivery,
             and product definition from discovery through launch.
           </p>
+        </div>
+      </section>
+
+      <section id="previews" class="section" aria-labelledby="previews-heading">
+        <h2 id="previews-heading" class="section-title">Live previews</h2>
+        <p class="previews-intro">
+          Embedded previews on this page. The Unloop PDF is mirrored under <code>/embeds/</code> so it can load inline (GitHub
+          raw URLs block framing). To refresh everything: <code>scripts/refresh-previews.sh</code> (or run
+          <code>scripts/refresh-streakit-demo.sh</code> / <code>scripts/sync-unloop-pdf-embed.sh</code> separately).
+        </p>
+        <div class="preview-grid">
+          <article class="preview-card" aria-labelledby="preview-streakit-title">
+            <h3 id="preview-streakit-title" class="preview-card-title">StreaKit SDK demo</h3>
+            <p class="preview-card-desc">Interactive browser build hosted on this site (<code>/streakit-demo/</code>).</p>
+            <div class="embed-shell embed-shell--app" role="region" aria-label="StreaKit demo embed">
+              <iframe
+                class="embed-frame"
+                title="StreaKit SDK demo"
+                src="/streakit-demo/"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                sandbox="allow-scripts allow-same-origin allow-forms"
+              ></iframe>
+            </div>
+            <p class="preview-card-actions">
+              <a href="/streakit-demo/" target="_blank" rel="noopener noreferrer">Open demo in new tab</a>
+            </p>
+          </article>
+          <article class="preview-card" aria-labelledby="preview-unloop-title">
+            <h3 id="preview-unloop-title" class="preview-card-title">Unloop — product overview</h3>
+            <p class="preview-card-desc">
+              Same-origin copy of the public overview PDF (synced from Unloop-Application).
+            </p>
+            <div class="embed-shell embed-shell--pdf" role="region" aria-label="Unloop product overview PDF">
+              <iframe
+                class="embed-frame"
+                title="Unloop product overview PDF"
+                src="/embeds/unloop-product-overview.pdf"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <p class="preview-card-actions">
+              <a
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/assets/Unloop_V2_Product_Overview.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open PDF on GitHub</a>
+              ·
+              <a
+                href="https://raw.githubusercontent.com/AryanKK/Unloop-Application/main/assets/Unloop_V2_Product_Overview.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Direct download</a>
+            </p>
+          </article>
         </div>
       </section>
 

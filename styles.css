@@ -219,6 +219,98 @@ main {
   max-width: 65ch;
 }
 
+.previews-intro {
+  margin: -0.5rem 0 1.75rem;
+  max-width: 60ch;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.preview-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+}
+
+.preview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.preview-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.preview-card-desc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.preview-card-desc code {
+  font-size: 0.85em;
+  padding: 0.12em 0.35em;
+  border-radius: 6px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.embed-shell {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  overflow: hidden;
+  min-height: 12rem;
+}
+
+.embed-shell--app {
+  aspect-ratio: 16 / 10;
+  min-height: 280px;
+  max-height: min(70vh, 520px);
+}
+
+.embed-shell--pdf {
+  aspect-ratio: 4 / 5;
+  min-height: 320px;
+  max-height: min(75vh, 640px);
+}
+
+.embed-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: 0;
+  background: #1a1a1f;
+}
+
+.preview-card-actions {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.preview-card-actions a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.preview-card-actions a:hover {
+  text-decoration: underline;
+}
+
 .edu-card {
   padding: 0;
 }
