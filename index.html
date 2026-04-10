@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Personal website" />
-    <title>Your Name — Personal site</title>
+    <meta
+      name="description"
+      content="Aryan K. Kedarisetty — B.S. Computer Science at UW. Product management, ML/NLP, and full-stack engineering."
+    />
+    <title>Aryan K. Kedarisetty</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,10 +20,13 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Primary">
-        <a class="logo" href="#">Your Name</a>
+        <a class="logo" href="#">Aryan K. Kedarisetty</a>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -30,80 +36,225 @@
       <section class="hero" aria-labelledby="hero-heading">
         <p class="eyebrow">Hello —</p>
         <h1 id="hero-heading" class="hero-title">
-          I build <em>thoughtful</em> things on the web.
+          I work at the intersection of <em>product</em>, ML, and systems.
         </h1>
         <p class="hero-lead">
-          Short one-liner about what you do. Edit this in <code>index.html</code>.
+          B.S. Computer Science at the University of Washington (expected June 2027). Incoming Product Management Intern at
+          Databricks; previously Software Engineering Intern at Oracle Health &amp; AI.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View work</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          <a class="btn btn-primary" href="#experience">Experience</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/aryan-k-kedarisetty1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </section>
 
       <section id="about" class="section" aria-labelledby="about-heading">
         <h2 id="about-heading" class="section-title">About</h2>
-        <div class="prose">
+        <div class="prose prose-wide">
           <p>
-            Replace this paragraph with a short bio: your background, what you care about,
-            and what you are working toward. Two or three sentences is enough for a first
-            version.
-          </p>
-          <p>
-            Add a second paragraph if you want to mention tools you use, your location,
-            or a link to your résumé PDF.
+            I care about shipping products that translate research and AI into reliable user value—especially in healthcare,
+            developer tooling, and behavioral-health tech. My background spans NLP and agentic systems, full-stack delivery,
+            and product definition from discovery through launch.
           </p>
         </div>
       </section>
 
+      <section id="education" class="section section-alt" aria-labelledby="education-heading">
+        <h2 id="education-heading" class="section-title">Education</h2>
+        <article class="edu-card">
+          <header class="edu-header">
+            <h3 class="edu-school">University of Washington</h3>
+            <p class="edu-meta">Seattle, WA · B.S. Computer Science · GPA 3.8 · Expected June 2027</p>
+          </header>
+          <p class="edu-label">Coursework</p>
+          <p class="edu-coursework">
+            Software Design &amp; Implementation, Machine Learning, Natural Language Processing (NLP), Computer Security,
+            Data Science in the Humanities
+          </p>
+        </article>
+      </section>
+
+      <section id="experience" class="section" aria-labelledby="experience-heading">
+        <h2 id="experience-heading" class="section-title">Experience</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-head">
+              <h3 class="timeline-title">Product Management Intern <span class="timeline-badge">Incoming</span></h3>
+              <p class="timeline-org">Databricks</p>
+              <p class="timeline-when">June 2026 – Sep 2026 · Bellevue, WA</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-head">
+              <h3 class="timeline-title">Software Engineering Intern</h3>
+              <p class="timeline-org">Oracle — Oracle Health &amp; Artificial Intelligence</p>
+              <p class="timeline-when">June 2025 – Sep 2025 · Seattle, WA</p>
+            </div>
+            <ul class="detail-list">
+              <li>
+                Scoped and shipped an NLP-powered search product over 30,000+ healthcare client management entities—defined
+                requirements, evaluated AI approaches, and delivered OCI GenAI Agents enabling natural language querying over
+                structured clinical records without requiring SQL from end users.
+              </li>
+              <li>
+                Defined success metrics and led delivery of an Agentic RAG + SQL service; built a query classifier achieving
+                ~90% F1 and a smart-SQL context builder that improved Oracle SQL execution accuracy by ~30%, cutting
+                time-to-insight and reducing manual SQL errors for healthcare data analysts.
+              </li>
+              <li>
+                Designed 5 modular NLP pipeline modules integrated into a CLI tool and Oracle JET web chatbot; defined data
+                migration strategy to Oracle Autonomous Database and Object Storage for scalable, reproducible rollout across
+                geographically distributed enterprise client environments.
+              </li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-head">
+              <h3 class="timeline-title">Research Intern</h3>
+              <p class="timeline-org">UW Emerging Integrated Technologies &amp; Systems Lab</p>
+              <p class="timeline-when">Sep 2023 – June 2024 · Seattle, WA</p>
+            </div>
+            <ul class="detail-list">
+              <li>
+                Researched automated analog/mixed-signal IC layout generation using Berkeley Analog Generator; documented
+                transistor routing features with Python and Matplotlib and resolved environment blockers to configure
+                PDK/Virtuoso server access, improving team research reproducibility.
+              </li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-head">
+              <h3 class="timeline-title">Software Engineering Intern</h3>
+              <p class="timeline-org">RevArt, LLC</p>
+              <p class="timeline-when">Sep 2022 – Sep 2023 · Bellevue, WA (Remote)</p>
+            </div>
+            <ul class="detail-list">
+              <li>
+                Identified artist portfolio creation as a high-friction user workflow; shipped a Next.js solution via
+                Instagram REST API that auto-generates e-commerce portfolio sites, cutting time-to-publish by 40%—owned
+                full-stack delivery in React + ANT Design from problem definition through launch.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
       <section id="projects" class="section section-alt" aria-labelledby="projects-heading">
         <h2 id="projects-heading" class="section-title">Projects</h2>
-        <ul class="project-grid">
-          <li class="project-card">
-            <h3 class="project-name">Project title</h3>
-            <p class="project-desc">
-              One sentence on what it does and why it matters.
-            </p>
-            <a class="project-link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub →</a>
+        <ul class="project-list">
+          <li class="project-block">
+            <header class="project-block-head">
+              <h3 class="project-name">Unloop</h3>
+              <p class="project-meta">Mar 2026</p>
+            </header>
+            <p class="tech-line">Tauri, React, TypeScript, Rust, Zustand, Pixi.js, Ollama</p>
+            <ul class="detail-list">
+              <li>
+                Defined product vision, 4 user conditions (anxiety, OCD, tic urges, cravings), 3 session modes, and a 31-task
+                library grounded in behavioral therapy research (ERP, CBIT, craving regulation); shipped a local-first
+                desktop app routing users from a brief intake to a clinically grounded task in under 1 minute.
+              </li>
+              <li>
+                Owned full product and engineering delivery (React + Rust + Pixi.js); designed a gamified world progression
+                reward system (3 biomes, cosmetic unlocks, cycle completion logic) to reinforce healthy engagement without
+                creating the compulsive rechecking loops the product is designed to prevent.
+              </li>
+            </ul>
           </li>
-          <li class="project-card">
-            <h3 class="project-name">Another project</h3>
-            <p class="project-desc">
-              Duplicate this block in the HTML for more entries.
-            </p>
-            <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">Live demo →</a>
+          <li class="project-block">
+            <header class="project-block-head">
+              <h3 class="project-name">StreaKit</h3>
+              <p class="project-meta">Feb 2026</p>
+            </header>
+            <p class="tech-line">TypeScript, React, React Native, Rive, Storybook, Figma</p>
+            <ul class="detail-list">
+              <li>
+                Conducted competitive analysis (Trophy, StriveCloud, DIY) to identify offline-first + visual richness as an
+                unserved gap in the developer gamification SDK market; authored a 3-phase product roadmap for an open-source
+                TypeScript SDK with 30+ animation collections targeting &lt;1 hour developer integration.
+              </li>
+              <li>
+                Defined developer API (3-line integration), success KPIs (1,000+ weekly npm downloads, 50+ production app
+                integrations in 12 months), WCAG 2.1 AA accessibility requirements, and a Phase 3 community theme marketplace
+                with npm-based revenue-sharing to incentivize open-source contributor monetization.
+              </li>
+            </ul>
           </li>
-          <li class="project-card">
-            <h3 class="project-name">Side experiment</h3>
-            <p class="project-desc">
-              Small tools, design studies, or open source contributions fit well here.
-            </p>
-            <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">Details →</a>
+          <li class="project-block">
+            <header class="project-block-head">
+              <h3 class="project-name">Burke Gilman Trail Traffic Predictor</h3>
+              <p class="project-meta">Dec 2024</p>
+            </header>
+            <p class="tech-line">Scikit-learn, Pandas, FastAPI, Docker, Azure</p>
+            <ul class="detail-list">
+              <li>
+                Identified pedestrian and cyclist trail traffic estimation as a commuter need near UW; trained a
+                VotingRegressor (RandomForest + XGBoost) on City of Seattle sensor data with GridSearchCV tuning to achieve
+                0.83 R²—56% above baseline—then deployed via Docker + FastAPI to Azure Container Instances for real-time
+                predictions.
+              </li>
+            </ul>
+          </li>
+          <li class="project-block">
+            <header class="project-block-head">
+              <h3 class="project-name">Atma</h3>
+              <p class="project-meta">Oct 2024 · Track winner, UW Dubhacks</p>
+            </header>
+            <p class="tech-line">Node.js, React, Chakra UI, Perplexity AI API, Vonage API</p>
+            <ul class="detail-list">
+              <li>
+                Identified workout consistency as a user pain point, defined product requirements, and shipped an AI-powered
+                planner using React Chakra UI, prompt-engineered Perplexity AI calls (structured JSON output), and Vonage SMS
+                reminders.
+              </li>
+            </ul>
           </li>
         </ul>
       </section>
 
+      <section id="skills" class="section" aria-labelledby="skills-heading">
+        <h2 id="skills-heading" class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 class="skill-group-title">Product</h3>
+            <p class="skill-group-body">
+              Product roadmapping, competitive analysis, user research, feature prioritization, Agile/Scrum, A/B testing, KPI
+              definition, stakeholder communication, product lifecycle management
+            </p>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group-title">Languages &amp; frameworks</h3>
+            <p class="skill-group-body">
+              Java (OOP, DSA, JUnit), Python (Pandas, Scikit-learn, LangChain, LlamaIndex, NumPy, FastAPI), TypeScript,
+              JavaScript, HTML/CSS, Node.js, Next.js, React (Chakra &amp; ANT Design), Rust
+            </p>
+          </div>
+          <div class="skill-group skill-group-wide">
+            <h3 class="skill-group-title">Tools</h3>
+            <p class="skill-group-body">
+              Figma, Jira, Asana, Git/GitHub, Docker, Azure, AWS S3, Tauri, Rive, Vitest, Storybook, REST APIs, Postman, VS
+              Code, Jupyter Notebook, Linux
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="section" aria-labelledby="contact-heading">
         <h2 id="contact-heading" class="section-title">Contact</h2>
-        <p class="contact-lead">
-          Best way to reach you — update these links to your real profiles.
-        </p>
+        <p class="contact-lead">Reach out on LinkedIn or GitHub.</p>
         <ul class="contact-list">
           <li>
-            <a href="mailto:you@example.com">Email</a>
+            <a href="https://www.linkedin.com/in/aryan-k-kedarisetty1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </li>
           <li>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/AryanKK" target="_blank" rel="noopener noreferrer">GitHub</a>
           </li>
         </ul>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Your Name. Built for GitHub Pages.</p>
+      <p>© <span id="year"></span> Aryan K. Kedarisetty</p>
     </footer>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
