@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal website" />
+    <title>Your Name — Personal site</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="logo" href="#">Your Name</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <p class="eyebrow">Hello —</p>
+        <h1 id="hero-heading" class="hero-title">
+          I build <em>thoughtful</em> things on the web.
+        </h1>
+        <p class="hero-lead">
+          Short one-liner about what you do. Edit this in <code>index.html</code>.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="section-title">About</h2>
+        <div class="prose">
+          <p>
+            Replace this paragraph with a short bio: your background, what you care about,
+            and what you are working toward. Two or three sentences is enough for a first
+            version.
+          </p>
+          <p>
+            Add a second paragraph if you want to mention tools you use, your location,
+            or a link to your résumé PDF.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-alt" aria-labelledby="projects-heading">
+        <h2 id="projects-heading" class="section-title">Projects</h2>
+        <ul class="project-grid">
+          <li class="project-card">
+            <h3 class="project-name">Project title</h3>
+            <p class="project-desc">
+              One sentence on what it does and why it matters.
+            </p>
+            <a class="project-link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub →</a>
+          </li>
+          <li class="project-card">
+            <h3 class="project-name">Another project</h3>
+            <p class="project-desc">
+              Duplicate this block in the HTML for more entries.
+            </p>
+            <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">Live demo →</a>
+          </li>
+          <li class="project-card">
+            <h3 class="project-name">Side experiment</h3>
+            <p class="project-desc">
+              Small tools, design studies, or open source contributions fit well here.
+            </p>
+            <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">Details →</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="section-title">Contact</h2>
+        <p class="contact-lead">
+          Best way to reach you — update these links to your real profiles.
+        </p>
+        <ul class="contact-list">
+          <li>
+            <a href="mailto:you@example.com">Email</a>
+          </li>
+          <li>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Your Name. Built for GitHub Pages.</p>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
