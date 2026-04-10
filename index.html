@@ -22,10 +22,10 @@
       <nav class="nav" aria-label="Primary">
         <a class="logo" href="#">Aryan K. Kedarisetty</a>
         <ul class="nav-links">
+          <li><a href="#showcase">Showcase</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#previews">Previews</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -44,8 +44,79 @@
           Databricks; previously Software Engineering Intern at Oracle Health &amp; AI.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#experience">Experience</a>
+          <a class="btn btn-primary" href="#showcase">Showcase</a>
+          <a class="btn btn-ghost" href="#experience">Experience</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/aryan-k-kedarisetty1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </section>
+
+      <section id="showcase" class="section showcase-section" aria-labelledby="showcase-heading">
+        <div class="showcase-intro-block">
+          <h2 id="showcase-heading" class="section-title">Showcase</h2>
+          <p class="showcase-lede">
+            Full-page demos and tester builds. Both are <strong>still in test</strong>—early evaluation artifacts, not
+            production releases.
+          </p>
+        </div>
+        <div class="showcase-grid">
+          <article class="showcase-card" aria-labelledby="showcase-streakit-title">
+            <header class="showcase-card-head">
+              <span class="test-pill">Still in test</span>
+              <h3 id="showcase-streakit-title" class="showcase-card-title">StreaKit — browser SDK demo</h3>
+            </header>
+            <p class="showcase-card-copy">
+              The interactive demo is meant to run <em>full width</em> in its own tab—not squeezed inside an embed. Use the
+              button below for the real showcase experience.
+            </p>
+            <div class="showcase-cta-row">
+              <a class="btn btn-primary btn-showcase" href="/streakit-demo/" target="_blank" rel="noopener noreferrer"
+                >Open full showcase</a>
+              <a class="btn btn-ghost" href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer"
+                >StreaKit Dev Kit</a>
+            </div>
+            <p class="showcase-card-foot">
+              Update the hosted build with <code>scripts/refresh-streakit-demo.sh</code> in this site repo.
+            </p>
+          </article>
+          <article class="showcase-card" aria-labelledby="showcase-unloop-title">
+            <header class="showcase-card-head">
+              <span class="test-pill">Still in test</span>
+              <h3 id="showcase-unloop-title" class="showcase-card-title">Unloop — macOS test build</h3>
+            </header>
+            <p class="showcase-card-copy">
+              Unloop is desktop-first; the public preview is the evaluation zip from
+              <span class="nowrap">Unloop-Application</span>. Read the testing notes before you run anything locally.
+            </p>
+            <div class="showcase-cta-row">
+              <a
+                class="btn btn-primary btn-showcase"
+                href="https://raw.githubusercontent.com/AryanKK/Unloop-Application/main/downloads/macos/unloop-desktop-macos-test.zip"
+                download="unloop-desktop-macos-test.zip"
+                rel="noopener noreferrer"
+                >Download macOS test build</a>
+              <a class="btn btn-ghost" href="https://github.com/AryanKK/Unloop-Application" target="_blank" rel="noopener noreferrer"
+                >Distribution repo</a>
+            </div>
+            <p class="showcase-card-secondary">
+              <a
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Testing &amp; verification</a>
+              ·
+              <a
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/assets/Unloop_V2_Product_Overview.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Product overview (PDF)</a>
+              ·
+              <a
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/assets/Unloop_V2_User_Guide.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >User guide (PDF)</a>
+            </p>
+          </article>
         </div>
       </section>
 
@@ -57,61 +128,6 @@
             developer tooling, and behavioral-health tech. My background spans NLP and agentic systems, full-stack delivery,
             and product definition from discovery through launch.
           </p>
-        </div>
-      </section>
-
-      <section id="previews" class="section" aria-labelledby="previews-heading">
-        <h2 id="previews-heading" class="section-title">Live previews</h2>
-        <p class="previews-intro">
-          Embedded previews on this page. The Unloop PDF is mirrored under <code>/embeds/</code> so it can load inline (GitHub
-          raw URLs block framing). To refresh everything: <code>scripts/refresh-previews.sh</code> (or run
-          <code>scripts/refresh-streakit-demo.sh</code> / <code>scripts/sync-unloop-pdf-embed.sh</code> separately).
-        </p>
-        <div class="preview-grid">
-          <article class="preview-card" aria-labelledby="preview-streakit-title">
-            <h3 id="preview-streakit-title" class="preview-card-title">StreaKit SDK demo</h3>
-            <p class="preview-card-desc">Interactive browser build hosted on this site (<code>/streakit-demo/</code>).</p>
-            <div class="embed-shell embed-shell--app" role="region" aria-label="StreaKit demo embed">
-              <iframe
-                class="embed-frame"
-                title="StreaKit SDK demo"
-                src="/streakit-demo/"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                sandbox="allow-scripts allow-same-origin allow-forms"
-              ></iframe>
-            </div>
-            <p class="preview-card-actions">
-              <a href="/streakit-demo/" target="_blank" rel="noopener noreferrer">Open demo in new tab</a>
-            </p>
-          </article>
-          <article class="preview-card" aria-labelledby="preview-unloop-title">
-            <h3 id="preview-unloop-title" class="preview-card-title">Unloop — product overview</h3>
-            <p class="preview-card-desc">
-              Same-origin copy of the public overview PDF (synced from Unloop-Application).
-            </p>
-            <div class="embed-shell embed-shell--pdf" role="region" aria-label="Unloop product overview PDF">
-              <iframe
-                class="embed-frame"
-                title="Unloop product overview PDF"
-                src="/embeds/unloop-product-overview.pdf"
-                loading="lazy"
-              ></iframe>
-            </div>
-            <p class="preview-card-actions">
-              <a
-                href="https://github.com/AryanKK/Unloop-Application/blob/main/assets/Unloop_V2_Product_Overview.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Open PDF on GitHub</a>
-              ·
-              <a
-                href="https://raw.githubusercontent.com/AryanKK/Unloop-Application/main/assets/Unloop_V2_Product_Overview.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Direct download</a>
-            </p>
-          </article>
         </div>
       </section>
 
@@ -205,9 +221,10 @@
             </header>
             <p class="tech-line">Tauri, React, TypeScript, Rust, Zustand, Pixi.js, Ollama</p>
             <p class="project-summary">
-              Local-first desktop companion for high-friction urge moments—anxiety, compulsion loops, tic pressure, and
-              cravings—with short, actionable interventions when escalation is already happening (not only after the fact).
-              Public materials and tester builds live in the distribution repo below; source stays private.
+              <span class="test-pill test-pill-inline">Still in test</span> Local-first desktop companion for high-friction urge
+              moments—anxiety, compulsion loops, tic pressure, and cravings—with short, actionable interventions when escalation
+              is already happening (not only after the fact). Public materials and tester builds live in the distribution repo
+              below; source stays private.
             </p>
             <ul class="project-links" aria-label="Unloop public resources">
               <li>
@@ -262,14 +279,15 @@
             </header>
             <p class="tech-line">TypeScript, React, React Native, Rive, Storybook, Figma</p>
             <p class="project-summary">
+              <span class="test-pill test-pill-inline">Still in test</span>
               <a href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer">StreaKit Dev Kit</a>
-              is the public developer surface: VitePress docs (<code>apps/docs</code>), a live browser demo
+              is the public developer surface: VitePress docs (<code>apps/docs</code>), a full browser showcase
               (<code>apps/demo</code>) wired to the local <code>@streakit/core</code> package (<code>packages/core</code>), and
               pnpm scripts for <code>pnpm dev:docs</code> / <code>pnpm dev:demo</code>.
             </p>
             <ul class="project-links" aria-label="StreaKit resources">
               <li>
-                <a href="/streakit-demo/">Live demo (showcase)</a>
+                <a href="/streakit-demo/" target="_blank" rel="noopener noreferrer">Open full showcase</a>
               </li>
               <li>
                 <a href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer">GitHub — StreaKit-Dev-Kit</a>
