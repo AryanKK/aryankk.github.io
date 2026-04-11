@@ -57,24 +57,34 @@
         <div class="showcase-intro-block">
           <h2 id="showcase-heading" class="section-title">Showcase</h2>
           <p class="showcase-lede">
-            I host a full-page StreaKit showcase here—the primary surface is a single-file <strong>animation library</strong>
-            you open in its own tab, with a separate <strong>SDK playground</strong> for record / freeze / unfreeze flows.
-            StreaKit is <strong>still in test</strong>. Unloop is desktop-first; the public distribution repo is
+            I host a full-page StreaKit showcase here—the primary button opens the single-file <strong>animation library</strong>
+            in its own tab; the other opens the <strong>SDK showcase</strong> (record / freeze / unfreeze).
+            <strong>StreaKit is a personal project in active development</strong>—not a finished product or commercial
+            offering; APIs and demos may change. Unloop is desktop-first; the public distribution repo is
             <strong>docs-first</strong> right now (product brief, privacy and safety, policies, PDFs) while macOS tester
-            downloads are paused for disclaimer and distribution readiness work.
+            downloads are paused for disclaimer and distribution readiness work. Unloop is a <strong>personal project</strong>,
+            not medical or mental health care—<strong>use at your own risk</strong>; see the distribution repo’s
+            <a
+              href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/DISCLAIMER.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              >disclaimer</a>.
           </p>
         </div>
         <div class="showcase-grid">
           <article class="showcase-card" aria-labelledby="showcase-streakit-title">
             <header class="showcase-card-head">
-              <span class="test-pill">Still in test</span>
-              <h3 id="showcase-streakit-title" class="showcase-card-title">StreaKit: animation library &amp; SDK playground</h3>
+              <div class="showcase-card-pills" role="group" aria-label="StreaKit status">
+                <span class="test-pill">Still in test</span>
+                <span class="test-pill">Personal project</span>
+              </div>
+              <h3 id="showcase-streakit-title" class="showcase-card-title">StreaKit: animation library &amp; SDK showcase</h3>
             </header>
             <p class="showcase-card-copy">
-              The main showcase is the <strong>animation library</strong>—one self-contained HTML file, full width in its own
-              tab, with the full visual catalog. The <strong>SDK playground</strong> is the smaller Vite build wired to
-              <code>@streakit/core</code> for record / freeze / unfreeze and integration-style checks; use it when you want
-              the dev-kit demo, not the animation grid.
+              <strong>Personal project in development:</strong> StreaKit (<code>@streakit</code>) is something I’m building in
+              public; it is not production-ready and may change without notice. The <strong>animation library</strong> is one
+              self-contained HTML file, full width, with the visual catalog. The <strong>SDK showcase</strong> is the Vite
+              playground wired to <code>@streakit/core</code> for record / freeze / unfreeze and integration-style checks.
             </p>
             <div class="showcase-cta-row">
               <a
@@ -82,9 +92,9 @@
                 href="/animation-showcase-standalone.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Open full showcase</a>
+                >Open animation library</a>
               <a class="btn btn-ghost btn-showcase" href="/streakit-demo/" target="_blank" rel="noopener noreferrer"
-                >Open SDK playground</a>
+                >Open SDK showcase</a>
               <a class="btn btn-ghost" href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer"
                 >StreaKit Dev Kit</a>
             </div>
@@ -95,7 +105,7 @@
                 href="https://github.com/AryanKK/StreaKit-Dev-Kit/blob/main/examples/animation-showcase-standalone.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                >StreaKit-Dev-Kit</a>). SDK playground: run <code>scripts/refresh-streakit-demo.sh</code> after Dev Kit changes, then commit
+                >StreaKit-Dev-Kit</a>). SDK showcase: run <code>scripts/refresh-streakit-demo.sh</code> after Dev Kit changes, then commit
               <code>streakit-demo/</code>.
             </p>
           </article>
@@ -108,7 +118,9 @@
               Unloop is desktop-first. There is no public macOS download on
               <span class="nowrap">Unloop-Application</span> while disclaimers and release packaging are prepared—start from
               the status page and the core policy and product docs linked below (same materials referenced in the Projects
-              section).
+              section). This is a <strong>personal project</strong>, not medical or mental health care—<strong>use at your own
+              risk</strong>. Product documents are not officially or scientifically backed by any entity; they support a
+              personal product-management exercise. The app is a <strong>test and prototype</strong> making no claims.
             </p>
             <div class="showcase-cta-row">
               <a
@@ -133,6 +145,12 @@
                 >Distribution repo</a>
             </div>
             <p class="showcase-card-secondary">
+              <a
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/DISCLAIMER.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Disclaimer</a>
+              ·
               <a
                 href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/PUBLIC_REPO_POLICY.md"
                 target="_blank"
@@ -174,7 +192,7 @@
               target="_blank"
               rel="noopener noreferrer"
               >Playwright journey tests on GitHub Actions</a>: they load this site from the same URLs visitors use, open the
-            hosted StreaKit <strong>SDK playground</strong> in a new tab and run a short record / freeze / unfreeze pass with
+            hosted StreaKit <strong>SDK showcase</strong> in a new tab and run a short record / freeze / unfreeze pass with
             streak and state assertions, and confirm the Unloop showcase still points at the distribution documentation hub (for
             example
             <a
@@ -192,6 +210,11 @@
           </p>
           <p class="validation-copy">
             <strong>Public distribution docs.</strong> Unloop:
+            <a
+              href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/DISCLAIMER.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              >disclaimer</a>,
             <a
               href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md"
               target="_blank"
@@ -330,11 +353,25 @@
               high-friction urge moments (anxiety, compulsion loops, tic pressure, cravings, etc.), with short, actionable
               interventions when escalation is already happening, not only after the fact. Public documentation and PDFs live
               in the distribution repo below; macOS tester downloads are paused while disclaimers and packaging are prepared.
-              Source code stays private for now.
+              Source code stays private for now. <strong>Personal project only</strong>—not medical or mental health care;
+              <strong>use at your own risk</strong>. Docs are not officially or scientifically backed; they are part of a
+              personal product-management exercise for a <strong>test/prototype</strong> with no claims.
+              <a
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/DISCLAIMER.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Full disclaimer</a>
             </p>
             <ul class="project-links" aria-label="Unloop public resources">
               <li>
                 <a href="https://github.com/AryanKK/Unloop-Application" target="_blank" rel="noopener noreferrer">GitHub: Unloop-Application</a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/DISCLAIMER.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Disclaimer</a>
               </li>
               <li>
                 <a
@@ -382,8 +419,9 @@
             <ul class="detail-list">
               <li>
                 Defined product vision, 4 user conditions (anxiety, OCD, tic urges, cravings), 3 session modes, and a 31-task
-                library grounded in behavioral therapy research (ERP, CBIT, craving regulation); shipped a local-first
-                desktop app routing users from a brief intake to a clinically grounded task in under 1 minute.
+                library referencing published behavioral-therapy concepts (ERP, CBIT, craving regulation) for a personal
+                product exercise—not clinical care; shipped a local-first desktop prototype routing from brief intake to a task
+                in under 1 minute.
               </li>
               <li>
                 Owned full product and engineering delivery (React + Rust + Pixi.js); designed a gamified world progression
@@ -400,18 +438,20 @@
             <p class="tech-line">TypeScript, React, React Native, Rive, Storybook, Figma</p>
             <p class="project-summary">
               <span class="test-pill test-pill-inline">Still in test</span>
+              <span class="test-pill test-pill-inline">Personal project</span>
               <a href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer">StreaKit Dev Kit</a>
-              is the public developer surface as I ship it today: VitePress docs (<code>apps/docs</code>), the SDK playground
-              (<code>apps/demo</code>) wired to <code>@streakit/core</code>, and a standalone animation library file under
-              <code>examples/</code>. The point is offline-first, visual SDK ergonomics for product teams who do not want a
+              is the public surface as I ship it today—<strong>a personal project in active development</strong>, not a
+              production or commercial product. It includes VitePress docs (<code>apps/docs</code>), the SDK showcase
+              (<code>apps/demo</code>) on <code>@streakit/core</code>, and a standalone animation library under
+              <code>examples/</code>. The direction is offline-first, visual SDK ergonomics for teams that do not want a
               cloud-only gamification story.
             </p>
             <ul class="project-links" aria-label="StreaKit resources">
               <li>
-                <a href="/animation-showcase-standalone.html" target="_blank" rel="noopener noreferrer">Open full showcase</a>
+                <a href="/animation-showcase-standalone.html" target="_blank" rel="noopener noreferrer">Open animation library</a>
               </li>
               <li>
-                <a href="/streakit-demo/" target="_blank" rel="noopener noreferrer">Open SDK playground</a>
+                <a href="/streakit-demo/" target="_blank" rel="noopener noreferrer">Open SDK showcase</a>
               </li>
               <li>
                 <a href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer">GitHub: StreaKit-Dev-Kit</a>

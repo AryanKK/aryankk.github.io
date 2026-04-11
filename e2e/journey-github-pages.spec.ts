@@ -1,5 +1,7 @@
 import { test, expect } from "@playwright/test";
 
+const UNLOOP_DISCLAIMER_URL =
+  "https://github.com/AryanKK/Unloop-Application/blob/main/docs/DISCLAIMER.md";
 const UNLOOP_TESTING_STATUS_URL =
   "https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md";
 const UNLOOP_PRODUCT_BRIEF_URL =
@@ -24,17 +26,17 @@ test.describe("Fast sanity", () => {
 
 /**
  * End-to-end journeys starting from the GitHub Pages site (same flows visitors use).
- * StreaKit: primary full showcase = standalone animation library; SDK playground = record / freeze / unfreeze.
+ * StreaKit: primary CTA = animation library; SDK showcase = record / freeze / unfreeze.
  * Unloop: docs-first showcase—no public macOS zip; links must target the distribution documentation hub on Unloop-Application.
  */
 test.describe("GitHub Pages to application journeys", () => {
-  test("StreaKit: home → Showcase → open full showcase (standalone) in new tab", async ({ page, context }) => {
+  test("StreaKit: home → Showcase → open animation library (standalone) in new tab", async ({ page, context }) => {
     await page.goto("/", { waitUntil: "domcontentloaded" });
     await page.getByLabel("Primary").getByRole("link", { name: "Showcase", exact: true }).click();
     await expect(page.locator("#showcase-heading")).toBeVisible();
 
     const popupPromise = context.waitForEvent("page");
-    await page.locator("#showcase").getByRole("link", { name: "Open full showcase" }).click();
+    await page.locator("#showcase").getByRole("link", { name: "Open animation library" }).click();
     const standalone = await popupPromise;
     await standalone.waitForLoadState("domcontentloaded");
     await expect(standalone).toHaveURL(/animation-showcase-standalone\.html/);
@@ -43,7 +45,7 @@ test.describe("GitHub Pages to application journeys", () => {
     await standalone.close();
   });
 
-  test("StreaKit: home → Showcase → open SDK playground (new tab) → record activity → freeze → unfreeze", async ({
+  test("StreaKit: home → Showcase → open SDK showcase (new tab) → record activity → freeze → unfreeze", async ({
     page,
     context,
   }) => {
@@ -52,7 +54,7 @@ test.describe("GitHub Pages to application journeys", () => {
     await expect(page.locator("#showcase-heading")).toBeVisible();
 
     const popupPromise = context.waitForEvent("page");
-    await page.locator("#showcase").getByRole("link", { name: "Open SDK playground" }).click();
+    await page.locator("#showcase").getByRole("link", { name: "Open SDK showcase" }).click();
     const demo = await popupPromise;
     await demo.waitForLoadState("load");
     await expect(demo).toHaveURL(/streakit-demo\/?$/);
@@ -87,6 +89,10 @@ test.describe("GitHub Pages to application journeys", () => {
     await page.getByLabel("Primary").getByRole("link", { name: "Showcase", exact: true }).click();
 
     const scope = page.locator("article").filter({ has: page.locator("#showcase-unloop-title") });
+    await expect(scope.getByRole("link", { name: "Disclaimer", exact: true })).toHaveAttribute(
+      "href",
+      UNLOOP_DISCLAIMER_URL,
+    );
     await expect(scope.getByRole("link", { name: "Download & testing status" })).toHaveAttribute(
       "href",
       UNLOOP_TESTING_STATUS_URL,
@@ -107,6 +113,10 @@ test.describe("GitHub Pages to application journeys", () => {
     await page.getByLabel("Primary").getByRole("link", { name: "Projects", exact: true }).click();
 
     const projects = page.locator("#projects");
+    await expect(projects.getByRole("link", { name: "Disclaimer", exact: true })).toHaveAttribute(
+      "href",
+      UNLOOP_DISCLAIMER_URL,
+    );
     const status = projects.getByRole("link", { name: "Download & testing status" });
     await expect(status).toHaveCount(1);
     await expect(status).toHaveAttribute("href", UNLOOP_TESTING_STATUS_URL);
