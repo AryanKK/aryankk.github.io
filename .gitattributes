@@ -1,0 +1,2 @@
+# Keep Grow Up reel as a normal blob so GitHub Pages serves the file (not an LFS pointer).
+media/*.mp4 !filter !diff !merge
