@@ -6,9 +6,9 @@ import { assertZipListsMacApp } from "./zip-assertions";
 const UNLOOP_ZIP_URL =
   "https://github.com/AryanKK/Unloop-Application/raw/main/downloads/macos/unloop-desktop-macos-test.zip";
 const UNLOOP_ZIP_SHA256 =
-  "a210d0804b74fd2e7aeebe0bdf83d396155d804310c3d3cb539904abdfce4103";
-/** From docs/TESTING_DOWNLOADS.md in Unloop-Application */
-const UNLOOP_APP_BUNDLE_NAME = "unloop_desktop_proto1.app";
+  "9cc7f874db2a7e6d0cb7ab264d418c13eb8c1395316b3dc34e5eccc00ce32831";
+/** Unloop V2: Tauri productName → Unloop.app (see Unloop-Application docs/TESTING_DOWNLOADS.md) */
+const UNLOOP_APP_BUNDLE_NAME = "Unloop.app";
 
 test.describe("Fast sanity", () => {
   test("home loads with expected title", async ({ page }) => {
@@ -16,14 +16,19 @@ test.describe("Fast sanity", () => {
     await expect(page).toHaveTitle(/Aryan K\. Kedarisetty/i);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   });
+
+  test("StreaKit animation library standalone HTML is served", async ({ page }) => {
+    await page.goto("/animation-showcase-standalone.html", { waitUntil: "domcontentloaded" });
+    await expect(page).toHaveTitle(/StreaKit.*Animation Library/i);
+  });
 });
 
 /**
  * End-to-end journeys starting from the GitHub Pages site (same flows visitors use).
  * StreaKit: modeled on the hosted SDK demo (Record / Freeze / Unfreeze), analogous to exercising
- * core streak flows in StreaKit user-journey checks. Unloop: modeled on proto1 distribution
- * expectations (TESTING_DOWNLOADS.md + manifest): correct URL from the site, SHA-256, zip lists
- * unloop_desktop_proto1.app for local install verification (Playwright cannot launch the macOS
+ * core streak flows in StreaKit user-journey checks. Unloop: public V2 distribution
+ * (TESTING_DOWNLOADS.md + manifest): correct URL from the site, SHA-256, zip lists
+ * Unloop.app for local install verification (Playwright cannot launch the macOS
  * .app in Linux CI).
  */
 test.describe("GitHub Pages to application journeys", () => {

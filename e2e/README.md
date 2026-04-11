@@ -7,7 +7,7 @@ These tests start from the same URLs visitors use on [aryankk.github.io](https:/
 | Source you use elsewhere | What we mirror here |
 |--------------------------|---------------------|
 | **StreaKit** `apps/demo` playground | After opening the demo from the site, we run **Record Activity**, **Freeze (2 days)**, **Unfreeze**, and assert **Current streak** and **State** text. That parallels a short StreaKit user-journey pass on the real SDK UI (localStorage-backed). |
-| **Unloop proto1** `tmp_unloop_v2_page_smoke.cjs` | That script hits **localhost:1420** and walks nav + quickstart; we cannot run the `.app` on Linux CI. Instead we validate the **public distribution funnel**: links use GitHub’s `.../raw/main/.../unloop-desktop-macos-test.zip` URL (same artifact as `raw.githubusercontent.com`), SHA-256 matches `downloads/manifest.json`, and `unzip -l` shows `unloop_desktop_proto1.app` per `docs/TESTING_DOWNLOADS.md`. |
+| **Unloop V2** + local smoke `tmp_unloop_v2_page_smoke.cjs` | That script hits **localhost:1420** and walks nav + quickstart; we cannot run the `.app` on Linux CI. Instead we validate the **public distribution funnel**: links use GitHub’s `.../raw/main/.../unloop-desktop-macos-test.zip` URL, SHA-256 matches `downloads/manifest.json`, and `unzip -l` shows `Unloop.app` (V2 Tauri `productName`) per `docs/TESTING_DOWNLOADS.md`. Proto1 history stays in `docs/proto1/` on the distribution repo. |
 | **Unloop** archive Playwright reports (TIC/ANX journeys) | Those are full product flows inside the desktop shell. This repo only asserts you can **download the same artifact** the docs describe and that the archive **contains the bundle name** you install locally. |
 
 ## Requirements

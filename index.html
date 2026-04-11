@@ -70,29 +70,37 @@
             </header>
             <p class="showcase-card-copy">
               StreaKit's interactive demo is meant to run <em>full width</em> in its own tab, not squeezed inside an embed, as
-              the layout and interaction model only make sense at real viewport size. Use the button below for the actual
-              experience.
+              the layout and interaction model only make sense at real viewport size. The SDK playground exercises record /
+              freeze / unfreeze flows; the animation library is a separate single-file build that previews the visual catalog.
             </p>
             <div class="showcase-cta-row">
               <a class="btn btn-primary btn-showcase" href="/streakit-demo/" target="_blank" rel="noopener noreferrer"
                 >Open full showcase</a>
+              <a
+                class="btn btn-ghost btn-showcase"
+                href="/animation-showcase-standalone.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open animation library</a>
               <a class="btn btn-ghost" href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer"
                 >StreaKit Dev Kit</a>
             </div>
             <p class="showcase-card-foot">
-              If you update the dev kit, refresh what lives here by running <code>scripts/refresh-streakit-demo.sh</code> in this
-              repo, then commit the new <code>streakit-demo/</code> output.
+              SDK demo: run <code>scripts/refresh-streakit-demo.sh</code> after Dev Kit changes, then commit <code>streakit-demo/</code>.
+              Animation library: replace root <code>animation-showcase-standalone.html</code> when you regenerate the standalone
+              bundle from the StreaKit monorepo.
             </p>
           </article>
           <article class="showcase-card" aria-labelledby="showcase-unloop-title">
             <header class="showcase-card-head">
               <span class="test-pill">Still in test</span>
-              <h3 id="showcase-unloop-title" class="showcase-card-title">Unloop: macOS test build</h3>
+              <h3 id="showcase-unloop-title" class="showcase-card-title">Unloop V2: macOS test build</h3>
             </header>
             <p class="showcase-card-copy">
-              Unloop is desktop-first, and the public preview is the same evaluation zip you get from
-              <span class="nowrap">Unloop-Application</span> on GitHub. Read the testing notes before you run anything locally,
-              as the build is meant for controlled evaluation, not casual install-and-forget use.
+              Unloop is desktop-first, and the public preview is the same V2 evaluation zip from
+              <span class="nowrap">Unloop-Application</span> on GitHub (bundle <code>Unloop.app</code>, not the legacy proto1
+              package). Read the testing notes before you run anything locally; the build is for controlled evaluation, not
+              casual install-and-forget use.
             </p>
             <div class="showcase-cta-row">
               <a
@@ -124,10 +132,10 @@
                 >User guide (PDF)</a>
             </p>
             <p class="showcase-card-foot">
-              The file is a real zip (~6&nbsp;MB) containing <code>unloop_desktop_proto1.app</code>. On macOS, if
+              The file is a real zip (~6.6&nbsp;MB) containing <code>Unloop.app</code> (Unloop V2). On macOS, if
               <strong>Preview</strong> opens and you only see one image, that is the app icon inside the archive, not a broken
-              download—<strong>right-click the zip → Open With → Archive Utility</strong> to extract, then open the
-              <code>.app</code>.
+              download—<strong>right-click the zip → Open With → Archive Utility</strong> to extract, then open
+              <code>Unloop.app</code>.
             </p>
           </article>
         </div>
@@ -147,7 +155,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><code>downloads/manifest.json</code></a>, and list the archive to confirm it contains
-            <code>unloop_desktop_proto1.app</code> as in
+            <code>Unloop.app</code> as in
             <a
               href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md"
               target="_blank"
@@ -331,8 +339,8 @@
               </li>
             </ul>
             <p class="project-download-hint">
-              Same zip as Showcase. If Preview shows a single image, extract with Archive Utility; you want
-              <code>unloop_desktop_proto1.app</code> from the expanded folder.
+              Same V2 zip as Showcase. If Preview shows a single image, extract with Archive Utility; you want
+              <code>Unloop.app</code> from the expanded folder.
             </p>
             <ul class="detail-list">
               <li>
@@ -365,6 +373,10 @@
             <ul class="project-links" aria-label="StreaKit resources">
               <li>
                 <a href="/streakit-demo/" target="_blank" rel="noopener noreferrer">Open full showcase</a>
+              </li>
+              <li>
+                <a href="/animation-showcase-standalone.html" target="_blank" rel="noopener noreferrer"
+                  >Animation library (standalone)</a>
               </li>
               <li>
                 <a href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer">GitHub: StreaKit-Dev-Kit</a>
