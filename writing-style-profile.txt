@@ -1,0 +1,183 @@
+================================================================================
+WRITING STYLE PROFILE: ARYAN K. KEDARISETTY (DRAFT FOR REVIEW)
+Compiled from: resume / personal site (index.html), this chat session, your
+self-reported habits, a redacted professional email sample, and an informal Discord
+message sample. Use this profile
+when generating semi-formal or professional copy that should sound like you, not
+generic assistant prose.
+================================================================================
+
+1) REGISTER AND GOALS
+- Default: clear, competent, student/professional voice: direct facts first, then
+  context. You open loops (internships, projects) and invite follow-up in casual
+  settings (GC/DM, questions about classes and ECs). On Discord you sound like a
+  peer giving practical advice: opinions up front, dense local detail, text-shorthand
+  where it saves time.
+- You blend product + engineering fluency (ship, scope, metrics, stack lists)
+  with human stakes (healthcare, behavioral health, film, community).
+- Avoid: stiff AI tells such as heavy em-dash parallelism, hollow enthusiasm, or
+  over-explaining. You asked to strip em dashes from site copy for that reason.
+- Professional email (gracious exit / thank-you): warm opener, specific gratitude
+  to people and program, brief factual middle (decision or update), open door for
+  a call, close with thanks for understanding. Sound human, not legalistic.
+
+2) SYNTAX AND PUNCTUATION (YOUR RULES)
+- Use "as" often as a connector (cause, role, frame): e.g. "as a second year
+  student," "as part of Dubhacks Next," etc.
+- Sentence length: mix long sentences with short ones; avoid monotone medium
+  length throughout a paragraph.
+- Transitions: however, moreover, additionally, etc. (you use "etc." freely when
+  listing open-ended items).
+- Commas: prefer comma splices / clause chaining over em dashes; commas are a
+  primary rhythm tool.
+- Em dashes: use sparingly (often 2–3 per page), mainly for elaboration after a
+  complete thought, not as a fake comma stack. Prefer commas and colons for rhythm;
+  resume bullets are a natural place for a tight em-dash follow-on.
+- Signposting: you like "this highlights …" to point at why something matters.
+
+3) VOCABULARY AND HABITS (FROM THIS SESSION + SITE)
+- Resume tone: strong action verbs (scoped, shipped, defined, led, designed,
+  identified, conducted, trained, deployed); concrete numbers (~90% F1, ~30%,
+  30,000+ entities, 40%, 0.83 R², etc.).
+- Product language: vision, roadmap, KPIs, integration, offline-first, WCAG,
+  stakeholder-facing phrasing where relevant.
+- Casual semi-formal: contractions OK ("I'm"), friendly invitations ("Feel free
+  to ask"), light exclamation where natural ("as well!").
+- Abbreviations you use: SWE, ECs, CS, PHIL, GC, DM, UW, etc. Informal typing:
+  r u, imo, def (see 4c).
+
+4) SEMI-FORMAL INTRO (YOUR WORDS, KEEP AS REFERENCE)
+"A little bit about me: I'm a second year CS and PHIL student. Last summer I was a SWE Intern in Oracle Health and AI. This summer I will be a Product Manager Intern at Databricks. Feel free to ask me any questions in this gc or DM.
+I also have been part of communities like Dubhacks Next and have taken a wide variety of CS courses, so if you have any questions about EC's and classes ask them as well!"
+
+4b) PROFESSIONAL EMAIL STYLE (FROM YOUR REDACTED MESSAGE, STRUCTURE ONLY)
+Patterns to mirror:
+- Open with care: "I hope you've been well!"
+- Lead with gratitude before the hard content: thank the person and broaden to
+  the team ("internship program team") with a sincere superlative ("some of the
+  kindest and most professional people I've had the pleasure of working with").
+- Anchor a specific past kindness ("Thank you for hopping on a call with me in
+  [month]") so it does not read generic.
+- Middle: state the substance plainly in your own words (declining, updating,
+  explaining). Redacted in the source sample; keep that block short and clear.
+- Bridge out: offer a call for context or anything else they want to discuss, as
+  a real invitation not a formality.
+- Close: "Thank you so much for your understanding." (acknowledges asymmetry and
+  leaves the relationship warm).
+
+Sanitized scaffold (fill brackets, do not treat as fixed wording):
+  I hope you've been well! I first want to thank you and [team] for being some
+  of the kindest and most professional people I've had the pleasure of working
+  with. Thank you for [specific past help, e.g. hopping on a call in February].
+  [Redacted: factual core of your message.]
+  I'm happy to jump on a call if you'd like more context around my decision or
+  would like to discuss anything else. Thank you so much for your understanding.
+
+Notes: No em dashes in this sample. Exclamation marks are sparse and sincere.
+Contractions ("I've," "you'd," "I'm") keep tone conversational while staying
+professional.
+
+4c) DISCORD / INFORMAL DM STYLE (FROM YOUR MESSAGE, VERBATIM + PATTERNS)
+Use when drafting casual peer advice (housing, internships, local tips), not for
+recruiters or formal email.
+
+Patterns:
+- Open with a soft frame + direct question: "yeah so first r u planning on …"
+- Typing shorthand: r u, imo, def (definitely), uw when context is obvious.
+- Long comma-linked thoughts: stack clauses with "so," "and," "that being said"
+  instead of short textbook sentences.
+- Opinion markers: "Bellevue imo is way nicer," "honestly will get you to
+  downtown in 15 min" (subjective + concrete).
+- Contrast pivot: "that being said" before drawbacks (cost, scarcity).
+- Parentheses for side texture: "(a long big road …)", "(there's a local mall …)".
+- Recommendations as either/or + geography: "either … or anything on 8th street."
+- Closing beat: named neighborhood + quick vibe list (food, park, community).
+
+Verbatim sample (keep spelling/punctuation as you wrote it; content is local advice):
+"yeah so first r u planning on living in bellevue/redmond or in seattle. seattle might have more interns and has apartments like the Standard and Oliv subleased by uw students during the summer so it might be beneficial socially and rent would be same as all year price.
+Bellevue imo is way nicer (way less traffic, very safe and neat atmos) and def closer, that being said summer leases might be more expensive and rare. If you are thinking bellevue, since the office is in Bellevue Downtown I reccomend either getting an apartment there or anything on 8th street (a long big road that honestly will get you to downtown in 15 min from most apartments - public transport is fast). Crossroads area is nice (there's a local mall that is very community oriented, great food, park/community centers)"
+
+Notes for assistants:
+- Do not "clean up" this voice into LinkedIn prose unless the user asks to escalate
+  register. Hyphen vs em dash: sample uses " - " once mid thought; fine for DMs.
+- If generating new Discord-style text for the user, mirror: imo/def/r u optional,
+  heavy commas, neighborhood specificity, tradeoffs explicit.
+
+5) RESUME COMPONENTS (COPIED INTACT FROM YOUR SITE / SOURCE RESUME)
+--- Identity / headline (site hero) ---
+B.S. Computer Science at the University of Washington (expected June 2027). Incoming Product Management Intern at Databricks; previously Software Engineering Intern at Oracle Health & AI.
+
+--- About (site) ---
+I care about shipping products that translate research and AI into reliable user value, especially in healthcare, developer tooling, and behavioral-health tech. My background spans NLP and agentic systems, full-stack delivery, and product definition from discovery through launch.
+
+--- Education ---
+University of Washington
+Seattle, WA · B.S. Computer Science · GPA 3.8 · Expected June 2027
+PHIL coursework in progress; minor declaration filed this quarter (transparent on
+the site until SIS reflects it).
+Coursework: Software Design & Implementation, Machine Learning, Natural Language Processing (NLP), Computer Security, Data Science in the Humanities
+
+--- Experience ---
+Databricks | Product Management Intern (Incoming) | June 2026 to Sep 2026 · Bellevue, WA
+
+Oracle, Oracle Health & Artificial Intelligence | Software Engineering Intern | June 2025 to Sep 2025 · Seattle, WA
+• Scoped and shipped an NLP-powered search product over 30,000+ healthcare client management entities. Defined requirements, evaluated AI approaches, and delivered OCI GenAI Agents enabling natural language querying over structured clinical records without requiring SQL from end users.
+• Defined success metrics and led delivery of an Agentic RAG + SQL service; built a query classifier achieving ~90% F1 and a smart-SQL context builder that improved Oracle SQL execution accuracy by ~30%, cutting time-to-insight and reducing manual SQL errors for healthcare data analysts.
+• Designed 5 modular NLP pipeline modules integrated into a CLI tool and Oracle JET web chatbot; defined data migration strategy to Oracle Autonomous Database and Object Storage for scalable, reproducible rollout across geographically distributed enterprise client environments.
+
+UW Emerging Integrated Technologies & Systems Lab | Research Intern | Sep 2023 to June 2024 · Seattle, WA
+• Researched automated analog/mixed-signal IC layout generation using Berkeley Analog Generator; documented transistor routing features with Python and Matplotlib and resolved environment blockers to configure PDK/Virtuoso server access, improving team research reproducibility.
+
+RevArt, LLC | Software Engineering Intern | Sep 2022 to Sep 2023 · Bellevue, WA (Remote)
+• Identified artist portfolio creation as a high-friction user workflow; shipped a Next.js solution via Instagram REST API that auto-generates e-commerce portfolio sites, cutting time-to-publish by 40%. Owned full-stack delivery in React + ANT Design from problem definition through launch.
+
+--- Projects (titles + tech lines + bullets as on site) ---
+Unloop | Mar 2026 | Tauri, React, TypeScript, Rust, Zustand, Pixi.js, Ollama
+• Defined product vision, 4 user conditions (anxiety, OCD, tic urges, cravings), 3 session modes, and a 31-task library grounded in behavioral therapy research (ERP, CBIT, craving regulation); shipped a local-first desktop app routing users from a brief intake to a clinically grounded task in under 1 minute.
+• Owned full product and engineering delivery (React + Rust + Pixi.js); designed a gamified world progression reward system (3 biomes, cosmetic unlocks, cycle completion logic) to reinforce healthy engagement without creating the compulsive rechecking loops the product is designed to prevent.
+
+StreaKit | Feb 2026 | TypeScript, React, React Native, Rive, Storybook, Figma
+• Conducted competitive analysis (Trophy, StriveCloud, DIY) to identify offline-first + visual richness as an unserved gap in the developer gamification SDK market; authored a 3-phase product roadmap for an open-source TypeScript SDK with 30+ animation collections targeting <1 hour developer integration.
+• Defined developer API (3-line integration), success KPIs (1,000+ weekly npm downloads, 50+ production app integrations in 12 months), WCAG 2.1 AA accessibility requirements, and a Phase 3 community theme marketplace with npm-based revenue-sharing to incentivize open-source contributor monetization.
+
+Burke Gilman Trail Traffic Predictor | Dec 2024 | Scikit-learn, Pandas, FastAPI, Docker, Azure
+• Identified pedestrian and cyclist trail traffic estimation as a commuter need near UW; trained a VotingRegressor (RandomForest + XGBoost) on City of Seattle sensor data with GridSearchCV tuning to achieve 0.83 R², 56% above baseline, then deployed via Docker + FastAPI to Azure Container Instances for real-time predictions.
+
+Atma | Oct 2024 · Track winner, UW Dubhacks | Node.js, React, Chakra UI, Perplexity AI API, Vonage API
+• Identified workout consistency as a user pain point, defined product requirements, and shipped an AI-powered planner using React Chakra UI, prompt-engineered Perplexity AI calls (structured JSON output), and Vonage SMS reminders.
+
+--- Side quest (film, as on site) ---
+Grow Up: A Short Story about Long Waits
+Logline: A young woman in recovery prepares a celebration for her brother that she could never give.
+
+--- Skills (as on site) ---
+Product: Product roadmapping, competitive analysis, user research, feature prioritization, Agile/Scrum, A/B testing, KPI definition, stakeholder communication, product lifecycle management
+Languages & frameworks: Java (OOP, DSA, JUnit), Python (Pandas, Scikit-learn, LangChain, LlamaIndex, NumPy, FastAPI), TypeScript, JavaScript, HTML/CSS, Node.js, Next.js, React (Chakra & ANT Design), Rust
+Tools: Figma, Jira, Asana, Git/GitHub, Docker, Azure, AWS S3, Tauri, Rive, Vitest, Storybook, REST APIs, Postman, VS Code, Jupyter Notebook, Linux
+
+6) NOTES FROM THIS SESSION (FOR FUTURE DRAFTS)
+- Site copy (as of the style pass): hero and About use "I'm," Dubhacks Next,
+  philosophy + CS framing, "this highlights," moreover/however; showcase explains
+  tester intent; education states minor timing explicitly; three em dashes live in
+  resume-style bullets for elaboration only.
+- You prefer GitHub labels like "GitHub: RepoName" over em-dash forms.
+- You care about accuracy on test builds, manifests, and "still in test" framing
+  for Unloop and StreaKit.
+
+7) QUICK CHECKLIST BEFORE SHIPPING COPY
+- [ ] Mix sentence lengths; at least one short punchy line per paragraph.
+- [ ] Use "as" where it clarifies role or causality.
+- [ ] Prefer commas / colons; use a few em dashes for elaboration, not decoration.
+- [ ] Add a transition where two ideas meet (however, moreover, etc.).
+- [ ] Use "etc." when lists are illustrative, not exhaustive.
+- [ ] Optional: one "this highlights …" if you are drawing a conclusion.
+- [ ] Resume facts: do not contradict the intact blocks in section 5.
+- [ ] For thank-you / exit emails: gratitude first, specific callback, clear
+  core message, optional call offer, thanks for understanding (see 4b).
+- [ ] For Discord / informal: shorthand OK, comma chains, imo/that being said,
+  parenthetical asides, concrete local or situational detail (see 4c).
+
+================================================================================
+End of profile. Edit this file freely; it is not deployed with the site unless
+you choose to commit it.
+================================================================================
