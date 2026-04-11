@@ -133,14 +133,21 @@
               href="https://github.com/AryanKK/aryankk.github.io/actions/workflows/playwright-smoke.yml"
               target="_blank"
               rel="noopener noreferrer"
-              >Playwright smoke tests on GitHub Actions</a>: they hit the home page, open the hosted StreaKit demo and check
-            that the primary "Record Activity" control is there, and download the public Unloop macOS zip to confirm its SHA-256
-            matches
+              >Playwright journey tests on GitHub Actions</a>: they load this site from the same URLs visitors use, open the
+            hosted StreaKit demo in a new tab and run a short record / freeze / unfreeze pass with streak and state assertions,
+            then follow the Unloop showcase and Projects links to the public macOS zip, verify SHA-256 against
             <a
               href="https://github.com/AryanKK/Unloop-Application/blob/main/downloads/manifest.json"
               target="_blank"
               rel="noopener noreferrer"
-              ><code>downloads/manifest.json</code></a>. On every push, tests run against the workspace copy; on a schedule (and
+              ><code>downloads/manifest.json</code></a>, and list the archive to confirm it contains
+            <code>unloop_desktop_proto1.app</code> as in
+            <a
+              href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Testing downloads</a>. On every push, tests run against the
+            workspace copy; on a schedule (and
             when you run the workflow manually) they run against <code>https://aryankk.github.io</code> as well.
           </p>
           <p class="validation-copy">
