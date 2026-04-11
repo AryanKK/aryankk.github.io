@@ -1,15 +1,15 @@
 import { test, expect } from "@playwright/test";
 
 const UNLOOP_DISCLAIMER_URL =
-  "https://github.com/AryanKK/Unloop-Application/blob/main/docs/DISCLAIMER.md";
+  "https://github.com/AryanKK/Unloop-Application-/blob/main/docs/DISCLAIMER.md";
 const UNLOOP_TESTING_STATUS_URL =
-  "https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md";
+  "https://github.com/AryanKK/Unloop-Application-/blob/main/docs/TESTING_DOWNLOADS.md";
 const UNLOOP_PRODUCT_BRIEF_URL =
-  "https://github.com/AryanKK/Unloop-Application/blob/main/docs/PRODUCT_BRIEF.md";
+  "https://github.com/AryanKK/Unloop-Application-/blob/main/docs/PRODUCT_BRIEF.md";
 const UNLOOP_PRIVACY_URL =
-  "https://github.com/AryanKK/Unloop-Application/blob/main/docs/PRIVACY_AND_SAFETY.md";
+  "https://github.com/AryanKK/Unloop-Application-/blob/main/docs/PRIVACY_AND_SAFETY.md";
 const UNLOOP_PUBLIC_POLICY_URL =
-  "https://github.com/AryanKK/Unloop-Application/blob/main/docs/PUBLIC_REPO_POLICY.md";
+  "https://github.com/AryanKK/Unloop-Application-/blob/main/docs/PUBLIC_REPO_POLICY.md";
 
 test.describe("Fast sanity", () => {
   test("home loads with expected title", async ({ page }) => {
@@ -27,7 +27,7 @@ test.describe("Fast sanity", () => {
 /**
  * End-to-end journeys starting from the GitHub Pages site (same flows visitors use).
  * StreaKit: primary CTA = animation library; SDK showcase = record / freeze / unfreeze.
- * Unloop: docs-first showcase—no public macOS zip; links must target the distribution documentation hub on Unloop-Application.
+ * Unloop: docs-first showcase—no public macOS zip; links must target the distribution documentation hub on Unloop-Application-.
  */
 test.describe("GitHub Pages to application journeys", () => {
   test("StreaKit: home → Showcase → open animation library (standalone) in new tab", async ({ page, context }) => {

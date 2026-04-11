@@ -7,7 +7,7 @@ These tests start from the same URLs visitors use on [aryankk.github.io](https:/
 | Source you use elsewhere | What we mirror here |
 |--------------------------|---------------------|
 | **StreaKit** `apps/demo` playground | After opening the demo from the site, we run **Record Activity**, **Freeze (2 days)**, **Unfreeze**, and assert **Current streak** and **State** text. |
-| **Unloop** public distribution | There is **no** published macOS zip on `main` while disclaimers and packaging are prepared. We assert Showcase and Projects link to **docs/DISCLAIMER.md**, **docs/TESTING_DOWNLOADS.md**, **PRODUCT_BRIEF.md**, **PRIVACY_AND_SAFETY.md**, and **PUBLIC_REPO_POLICY.md** on [Unloop-Application](https://github.com/AryanKK/Unloop-Application). |
+| **Unloop** public distribution | There is **no** published macOS zip on `main` while disclaimers and packaging are prepared. We assert Showcase and Projects link to **docs/DISCLAIMER.md**, **docs/TESTING_DOWNLOADS.md**, **PRODUCT_BRIEF.md**, **PRIVACY_AND_SAFETY.md**, and **PUBLIC_REPO_POLICY.md** on [Unloop-Application-](https://github.com/AryanKK/Unloop-Application-). |
 
 ## Requirements
 
