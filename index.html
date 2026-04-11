@@ -57,8 +57,9 @@
         <div class="showcase-intro-block">
           <h2 id="showcase-heading" class="section-title">Showcase</h2>
           <p class="showcase-lede">
-            I host a full-page StreaKit demo here so people can try the SDK, not only read about it—it is
-            <strong>still in test</strong>. Unloop is desktop-first; the public distribution repo is
+            I host a full-page StreaKit showcase here—the primary surface is a single-file <strong>animation library</strong>
+            you open in its own tab, with a separate <strong>SDK playground</strong> for record / freeze / unfreeze flows.
+            StreaKit is <strong>still in test</strong>. Unloop is desktop-first; the public distribution repo is
             <strong>docs-first</strong> right now (product brief, privacy and safety, policies, PDFs) while macOS tester
             downloads are paused for disclaimer and distribution readiness work.
           </p>
@@ -67,29 +68,35 @@
           <article class="showcase-card" aria-labelledby="showcase-streakit-title">
             <header class="showcase-card-head">
               <span class="test-pill">Still in test</span>
-              <h3 id="showcase-streakit-title" class="showcase-card-title">StreaKit: browser SDK demo</h3>
+              <h3 id="showcase-streakit-title" class="showcase-card-title">StreaKit: animation library &amp; SDK playground</h3>
             </header>
             <p class="showcase-card-copy">
-              StreaKit's interactive demo is meant to run <em>full width</em> in its own tab, not squeezed inside an embed, as
-              the layout and interaction model only make sense at real viewport size. The SDK playground exercises record /
-              freeze / unfreeze flows; the animation library is a separate single-file build that previews the visual catalog.
+              The main showcase is the <strong>animation library</strong>—one self-contained HTML file, full width in its own
+              tab, with the full visual catalog. The <strong>SDK playground</strong> is the smaller Vite build wired to
+              <code>@streakit/core</code> for record / freeze / unfreeze and integration-style checks; use it when you want
+              the dev-kit demo, not the animation grid.
             </p>
             <div class="showcase-cta-row">
-              <a class="btn btn-primary btn-showcase" href="/streakit-demo/" target="_blank" rel="noopener noreferrer"
-                >Open full showcase</a>
               <a
-                class="btn btn-ghost btn-showcase"
+                class="btn btn-primary btn-showcase"
                 href="/animation-showcase-standalone.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Open animation library</a>
+                >Open full showcase</a>
+              <a class="btn btn-ghost btn-showcase" href="/streakit-demo/" target="_blank" rel="noopener noreferrer"
+                >Open SDK playground</a>
               <a class="btn btn-ghost" href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer"
                 >StreaKit Dev Kit</a>
             </div>
             <p class="showcase-card-foot">
-              SDK demo: run <code>scripts/refresh-streakit-demo.sh</code> after Dev Kit changes, then commit <code>streakit-demo/</code>.
               Animation library: replace root <code>animation-showcase-standalone.html</code> when you regenerate the standalone
-              bundle from the StreaKit monorepo.
+              bundle from the StreaKit monorepo (also in
+              <a
+                href="https://github.com/AryanKK/StreaKit-Dev-Kit/blob/main/examples/animation-showcase-standalone.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >StreaKit-Dev-Kit</a>). SDK playground: run <code>scripts/refresh-streakit-demo.sh</code> after Dev Kit changes, then commit
+              <code>streakit-demo/</code>.
             </p>
           </article>
           <article class="showcase-card" aria-labelledby="showcase-unloop-title">
@@ -167,8 +174,9 @@
               target="_blank"
               rel="noopener noreferrer"
               >Playwright journey tests on GitHub Actions</a>: they load this site from the same URLs visitors use, open the
-            hosted StreaKit demo in a new tab and run a short record / freeze / unfreeze pass with streak and state
-            assertions, and confirm the Unloop showcase still points at the distribution documentation hub (for example
+            hosted StreaKit <strong>SDK playground</strong> in a new tab and run a short record / freeze / unfreeze pass with
+            streak and state assertions, and confirm the Unloop showcase still points at the distribution documentation hub (for
+            example
             <a
               href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md"
               target="_blank"
@@ -393,19 +401,17 @@
             <p class="project-summary">
               <span class="test-pill test-pill-inline">Still in test</span>
               <a href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer">StreaKit Dev Kit</a>
-              is the public developer surface as I ship it today: VitePress docs (<code>apps/docs</code>), a full browser
-              showcase (<code>apps/demo</code>) wired to the local <code>@streakit/core</code> package
-              (<code>packages/core</code>), plus pnpm scripts for <code>pnpm dev:docs</code> and <code>pnpm dev:demo</code>.
-              Moreover, the point is offline-first, visual SDK ergonomics for product teams who do not want a cloud-only
-              gamification story.
+              is the public developer surface as I ship it today: VitePress docs (<code>apps/docs</code>), the SDK playground
+              (<code>apps/demo</code>) wired to <code>@streakit/core</code>, and a standalone animation library file under
+              <code>examples/</code>. The point is offline-first, visual SDK ergonomics for product teams who do not want a
+              cloud-only gamification story.
             </p>
             <ul class="project-links" aria-label="StreaKit resources">
               <li>
-                <a href="/streakit-demo/" target="_blank" rel="noopener noreferrer">Open full showcase</a>
+                <a href="/animation-showcase-standalone.html" target="_blank" rel="noopener noreferrer">Open full showcase</a>
               </li>
               <li>
-                <a href="/animation-showcase-standalone.html" target="_blank" rel="noopener noreferrer"
-                  >Animation library (standalone)</a>
+                <a href="/streakit-demo/" target="_blank" rel="noopener noreferrer">Open SDK playground</a>
               </li>
               <li>
                 <a href="https://github.com/AryanKK/StreaKit-Dev-Kit" target="_blank" rel="noopener noreferrer">GitHub: StreaKit-Dev-Kit</a>

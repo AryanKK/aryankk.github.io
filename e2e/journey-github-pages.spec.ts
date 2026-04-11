@@ -24,11 +24,26 @@ test.describe("Fast sanity", () => {
 
 /**
  * End-to-end journeys starting from the GitHub Pages site (same flows visitors use).
- * StreaKit: hosted SDK demo (Record / Freeze / Unfreeze). Unloop: docs-first showcase—no public
- * macOS zip; links must target the distribution documentation hub on Unloop-Application.
+ * StreaKit: primary full showcase = standalone animation library; SDK playground = record / freeze / unfreeze.
+ * Unloop: docs-first showcase—no public macOS zip; links must target the distribution documentation hub on Unloop-Application.
  */
 test.describe("GitHub Pages to application journeys", () => {
-  test("StreaKit: home → Showcase → open demo (new tab) → record activity → freeze → unfreeze", async ({
+  test("StreaKit: home → Showcase → open full showcase (standalone) in new tab", async ({ page, context }) => {
+    await page.goto("/", { waitUntil: "domcontentloaded" });
+    await page.getByLabel("Primary").getByRole("link", { name: "Showcase", exact: true }).click();
+    await expect(page.locator("#showcase-heading")).toBeVisible();
+
+    const popupPromise = context.waitForEvent("page");
+    await page.locator("#showcase").getByRole("link", { name: "Open full showcase" }).click();
+    const standalone = await popupPromise;
+    await standalone.waitForLoadState("domcontentloaded");
+    await expect(standalone).toHaveURL(/animation-showcase-standalone\.html/);
+    await expect(standalone).toHaveTitle(/StreaKit.*Animation Library/i);
+    await expect(standalone.locator("#root")).toBeVisible({ timeout: 15_000 });
+    await standalone.close();
+  });
+
+  test("StreaKit: home → Showcase → open SDK playground (new tab) → record activity → freeze → unfreeze", async ({
     page,
     context,
   }) => {
@@ -37,7 +52,7 @@ test.describe("GitHub Pages to application journeys", () => {
     await expect(page.locator("#showcase-heading")).toBeVisible();
 
     const popupPromise = context.waitForEvent("page");
-    await page.locator("#showcase").getByRole("link", { name: "Open full showcase" }).click();
+    await page.locator("#showcase").getByRole("link", { name: "Open SDK playground" }).click();
     const demo = await popupPromise;
     await demo.waitForLoadState("load");
     await expect(demo).toHaveURL(/streakit-demo\/?$/);
