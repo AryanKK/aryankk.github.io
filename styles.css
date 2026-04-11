@@ -334,6 +334,50 @@ main {
   text-decoration: underline;
 }
 
+.validation-panel {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  max-width: 52rem;
+}
+
+.validation-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.validation-copy {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.validation-copy:last-child {
+  margin-bottom: 0;
+}
+
+.validation-copy a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.validation-copy a:hover {
+  text-decoration: underline;
+}
+
+.validation-copy code {
+  font-size: 0.88em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--bg) 70%, var(--bg-elevated));
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
 .test-pill {
   display: inline-block;
   font-size: 0.6875rem;

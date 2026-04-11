@@ -1,0 +1,76 @@
+name: Playwright smoke
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "35 17 * * *"
+
+jobs:
+  smoke-local:
+    name: Against workspace (validates what you push)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: Serve static site
+        run: |
+          python3 -m http.server 4174 --directory "${{ github.workspace }}" &
+          sleep 2
+          curl -sSf "http://127.0.0.1:4174/" >/dev/null
+
+      - name: Run Playwright
+        run: npm run test:e2e
+        env:
+          BASE_URL: http://127.0.0.1:4174
+
+      - name: Upload report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-local
+          path: playwright-report/
+
+  smoke-production:
+    name: Against aryankk.github.io (scheduled / manual)
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: Run Playwright
+        run: npm run test:e2e
+        env:
+          BASE_URL: https://aryankk.github.io
+
+      - name: Upload report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-production
+          path: playwright-report/
