@@ -1,20 +1,18 @@
-# Playwright: GitHub Pages to application journeys
+# Playwright: GitHub Pages journeys
 
-These tests start from the same URLs visitors use on [aryankk.github.io](https://aryankk.github.io), then exercise the StreaKit hosted demo and the public Unloop macOS artifact.
+These tests start from the same URLs visitors use on [aryankk.github.io](https://aryankk.github.io), then exercise the StreaKit hosted demo and the Unloop documentation links from Showcase and Projects.
 
 ## What is modeled after what
 
 | Source you use elsewhere | What we mirror here |
 |--------------------------|---------------------|
-| **StreaKit** `apps/demo` playground | After opening the demo from the site, we run **Record Activity**, **Freeze (2 days)**, **Unfreeze**, and assert **Current streak** and **State** text. That parallels a short StreaKit user-journey pass on the real SDK UI (localStorage-backed). |
-| **Unloop V2** + local smoke `tmp_unloop_v2_page_smoke.cjs` | That script hits **localhost:1420** and walks nav + quickstart; we cannot run the `.app` on Linux CI. Instead we validate the **public distribution funnel**: links use GitHub’s `.../raw/main/.../unloop-desktop-macos-test.zip` URL, SHA-256 matches `downloads/manifest.json`, and `unzip -l` shows `Unloop.app` (V2 Tauri `productName`) per `docs/TESTING_DOWNLOADS.md`. Proto1 history stays in `docs/proto1/` on the distribution repo. |
-| **Unloop** archive Playwright reports (TIC/ANX journeys) | Those are full product flows inside the desktop shell. This repo only asserts you can **download the same artifact** the docs describe and that the archive **contains the bundle name** you install locally. |
+| **StreaKit** `apps/demo` playground | After opening the demo from the site, we run **Record Activity**, **Freeze (2 days)**, **Unfreeze**, and assert **Current streak** and **State** text. |
+| **Unloop** public distribution | There is **no** published macOS zip on `main` while disclaimers and packaging are prepared. We assert Showcase and Projects link to **docs/TESTING_DOWNLOADS.md**, **PRODUCT_BRIEF.md**, **PRIVACY_AND_SAFETY.md**, and **PUBLIC_REPO_POLICY.md** on [Unloop-Application](https://github.com/AryanKK/Unloop-Application). |
 
 ## Requirements
 
 - **Node 20** + `npm ci`
 - **Chromium** via `npx playwright install chromium`
-- **`unzip`** on `PATH` (preinstalled on `ubuntu-latest`; macOS has it)
 
 ## Run locally
 

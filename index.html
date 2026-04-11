@@ -57,9 +57,10 @@
         <div class="showcase-intro-block">
           <h2 id="showcase-heading" class="section-title">Showcase</h2>
           <p class="showcase-lede">
-            I host full-page demos and tester builds here so people can try the products, not just read about them. Both are
-            <strong>still in test</strong>, early evaluation artifacts rather than production releases. However, I still want
-            the showcase to be real: you can click through the SDK demo or download the macOS package exactly as testers would.
+            I host a full-page StreaKit demo here so people can try the SDK, not only read about it—it is
+            <strong>still in test</strong>. Unloop is desktop-first; the public distribution repo is
+            <strong>docs-first</strong> right now (product brief, privacy and safety, policies, PDFs) while macOS tester
+            downloads are paused for disclaimer and distribution readiness work.
           </p>
         </div>
         <div class="showcase-grid">
@@ -94,30 +95,48 @@
           <article class="showcase-card" aria-labelledby="showcase-unloop-title">
             <header class="showcase-card-head">
               <span class="test-pill">Still in test</span>
-              <h3 id="showcase-unloop-title" class="showcase-card-title">Unloop V2: macOS test build</h3>
+              <h3 id="showcase-unloop-title" class="showcase-card-title">Unloop: documentation &amp; distribution</h3>
             </header>
             <p class="showcase-card-copy">
-              Unloop is desktop-first, and the public preview is the same V2 evaluation zip from
-              <span class="nowrap">Unloop-Application</span> on GitHub (bundle <code>Unloop.app</code>, not the legacy proto1
-              package). Read the testing notes before you run anything locally; the build is for controlled evaluation, not
-              casual install-and-forget use.
+              Unloop is desktop-first. There is no public macOS download on
+              <span class="nowrap">Unloop-Application</span> while disclaimers and release packaging are prepared—start from
+              the status page and the core policy and product docs linked below (same materials referenced in the Projects
+              section).
             </p>
             <div class="showcase-cta-row">
               <a
                 class="btn btn-primary btn-showcase"
-                href="https://github.com/AryanKK/Unloop-Application/raw/main/downloads/macos/unloop-desktop-macos-test.zip"
-                type="application/zip"
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md"
+                target="_blank"
                 rel="noopener noreferrer"
-                >Download macOS test build</a>
+                >Download &amp; testing status</a>
+              <a
+                class="btn btn-ghost btn-showcase"
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/PRODUCT_BRIEF.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Product brief</a>
+              <a
+                class="btn btn-ghost btn-showcase"
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/PRIVACY_AND_SAFETY.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Privacy &amp; safety</a>
               <a class="btn btn-ghost" href="https://github.com/AryanKK/Unloop-Application" target="_blank" rel="noopener noreferrer"
                 >Distribution repo</a>
             </div>
             <p class="showcase-card-secondary">
               <a
-                href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md"
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/PUBLIC_REPO_POLICY.md"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Testing &amp; verification</a>
+                >Public repo policy</a>
+              ·
+              <a
+                href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/DEVELOPER_TEST_SETUP.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Developer test setup</a>
               ·
               <a
                 href="https://github.com/AryanKK/Unloop-Application/blob/main/assets/Unloop_V2_Product_Overview.pdf"
@@ -132,10 +151,10 @@
                 >User guide (PDF)</a>
             </p>
             <p class="showcase-card-foot">
-              The file is a real zip (~6.6&nbsp;MB) containing <code>Unloop.app</code> (Unloop V2). On macOS, if
-              <strong>Preview</strong> opens and you only see one image, that is the app icon inside the archive, not a broken
-              download—<strong>right-click the zip → Open With → Archive Utility</strong> to extract, then open
-              <code>Unloop.app</code>.
+              Maintainer: when a tester zip returns, update
+              <a href="https://github.com/AryanKK/Unloop-Application/blob/main/downloads/manifest.json" target="_blank" rel="noopener noreferrer"
+                ><code>downloads/manifest.json</code></a>
+              and this site’s Showcase in the same change set.
             </p>
           </article>
         </div>
@@ -148,29 +167,28 @@
               target="_blank"
               rel="noopener noreferrer"
               >Playwright journey tests on GitHub Actions</a>: they load this site from the same URLs visitors use, open the
-            hosted StreaKit demo in a new tab and run a short record / freeze / unfreeze pass with streak and state assertions,
-            then follow the Unloop showcase and Projects links to the public macOS zip, verify SHA-256 against
-            <a
-              href="https://github.com/AryanKK/Unloop-Application/blob/main/downloads/manifest.json"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><code>downloads/manifest.json</code></a>, and list the archive to confirm it contains
-            <code>Unloop.app</code> as in
+            hosted StreaKit demo in a new tab and run a short record / freeze / unfreeze pass with streak and state
+            assertions, and confirm the Unloop showcase still points at the distribution documentation hub (for example
             <a
               href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md"
               target="_blank"
               rel="noopener noreferrer"
-              >Testing downloads</a>. On every push, tests run against the
-            workspace copy; on a schedule (and
-            when you run the workflow manually) they run against <code>https://aryankk.github.io</code> as well.
+              >download &amp; testing status</a>
+            and
+            <a
+              href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/PRODUCT_BRIEF.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              >product brief</a>). On every push, tests run against the workspace copy; on a schedule (and when you run the
+            workflow manually) they run against <code>https://aryankk.github.io</code> as well.
           </p>
           <p class="validation-copy">
-            <strong>Public test docs.</strong> Unloop distribution repo:
+            <strong>Public distribution docs.</strong> Unloop:
             <a
               href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md"
               target="_blank"
               rel="noopener noreferrer"
-              >Testing downloads</a>,
+              >testing &amp; download status</a>,
             <a
               href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/DEVELOPER_TEST_SETUP.md"
               target="_blank"
@@ -302,8 +320,9 @@
             <p class="project-summary">
               <span class="test-pill test-pill-inline">Still in test</span> Unloop is a local-first desktop companion for
               high-friction urge moments (anxiety, compulsion loops, tic pressure, cravings, etc.), with short, actionable
-              interventions when escalation is already happening, not only after the fact. Public materials and tester builds
-              live in the distribution repo below; however, source code stays private for now.
+              interventions when escalation is already happening, not only after the fact. Public documentation and PDFs live
+              in the distribution repo below; macOS tester downloads are paused while disclaimers and packaging are prepared.
+              Source code stays private for now.
             </p>
             <ul class="project-links" aria-label="Unloop public resources">
               <li>
@@ -311,10 +330,31 @@
               </li>
               <li>
                 <a
+                  href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Download &amp; testing status</a>
+              </li>
+              <li>
+                <a
                   href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/PRODUCT_BRIEF.md"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Product brief</a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/PRIVACY_AND_SAFETY.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Privacy &amp; safety</a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/AryanKK/Unloop-Application/blob/main/docs/PUBLIC_REPO_POLICY.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Public repo policy</a>
               </li>
               <li>
                 <a
@@ -330,18 +370,7 @@
                   rel="noopener noreferrer"
                   >User guide (PDF)</a>
               </li>
-              <li>
-                <a
-                  href="https://github.com/AryanKK/Unloop-Application/raw/main/downloads/macos/unloop-desktop-macos-test.zip"
-                  type="application/zip"
-                  rel="noopener noreferrer"
-                  >macOS tester download (zip)</a>
-              </li>
             </ul>
-            <p class="project-download-hint">
-              Same V2 zip as Showcase. If Preview shows a single image, extract with Archive Utility; you want
-              <code>Unloop.app</code> from the expanded folder.
-            </p>
             <ul class="detail-list">
               <li>
                 Defined product vision, 4 user conditions (anxiety, OCD, tic urges, cravings), 3 session modes, and a 31-task

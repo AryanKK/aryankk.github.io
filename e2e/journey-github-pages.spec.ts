@@ -1,14 +1,13 @@
-import { createHash } from "node:crypto";
 import { test, expect } from "@playwright/test";
-import { assertZipListsMacApp } from "./zip-assertions";
 
-/** Canonical download URL (redirects to raw.githubusercontent.com; same bytes as manifest). */
-const UNLOOP_ZIP_URL =
-  "https://github.com/AryanKK/Unloop-Application/raw/main/downloads/macos/unloop-desktop-macos-test.zip";
-const UNLOOP_ZIP_SHA256 =
-  "9cc7f874db2a7e6d0cb7ab264d418c13eb8c1395316b3dc34e5eccc00ce32831";
-/** Unloop V2: Tauri productName → Unloop.app (see Unloop-Application docs/TESTING_DOWNLOADS.md) */
-const UNLOOP_APP_BUNDLE_NAME = "Unloop.app";
+const UNLOOP_TESTING_STATUS_URL =
+  "https://github.com/AryanKK/Unloop-Application/blob/main/docs/TESTING_DOWNLOADS.md";
+const UNLOOP_PRODUCT_BRIEF_URL =
+  "https://github.com/AryanKK/Unloop-Application/blob/main/docs/PRODUCT_BRIEF.md";
+const UNLOOP_PRIVACY_URL =
+  "https://github.com/AryanKK/Unloop-Application/blob/main/docs/PRIVACY_AND_SAFETY.md";
+const UNLOOP_PUBLIC_POLICY_URL =
+  "https://github.com/AryanKK/Unloop-Application/blob/main/docs/PUBLIC_REPO_POLICY.md";
 
 test.describe("Fast sanity", () => {
   test("home loads with expected title", async ({ page }) => {
@@ -25,11 +24,8 @@ test.describe("Fast sanity", () => {
 
 /**
  * End-to-end journeys starting from the GitHub Pages site (same flows visitors use).
- * StreaKit: modeled on the hosted SDK demo (Record / Freeze / Unfreeze), analogous to exercising
- * core streak flows in StreaKit user-journey checks. Unloop: public V2 distribution
- * (TESTING_DOWNLOADS.md + manifest): correct URL from the site, SHA-256, zip lists
- * Unloop.app for local install verification (Playwright cannot launch the macOS
- * .app in Linux CI).
+ * StreaKit: hosted SDK demo (Record / Freeze / Unfreeze). Unloop: docs-first showcase—no public
+ * macOS zip; links must target the distribution documentation hub on Unloop-Application.
  */
 test.describe("GitHub Pages to application journeys", () => {
   test("StreaKit: home → Showcase → open demo (new tab) → record activity → freeze → unfreeze", async ({
@@ -71,34 +67,34 @@ test.describe("GitHub Pages to application journeys", () => {
     await demo.close();
   });
 
-  test("Unloop: Showcase download link points at published artifact; bytes match manifest; zip lists .app", async ({
-    page,
-    request,
-  }) => {
+  test("Unloop: Showcase links to distribution documentation hub (no macOS zip)", async ({ page }) => {
     await page.goto("/", { waitUntil: "domcontentloaded" });
     await page.getByLabel("Primary").getByRole("link", { name: "Showcase", exact: true }).click();
 
-    const download = page.locator("#showcase").getByRole("link", { name: "Download macOS test build" });
-    await expect(download).toBeVisible();
-    const href = await download.getAttribute("href");
-    expect(href, "download href").toBe(UNLOOP_ZIP_URL);
-
-    const res = await request.get(UNLOOP_ZIP_URL);
-    expect(res.ok(), `zip HTTP ${res.status()}`).toBeTruthy();
-    const body = await res.body();
-    const hash = createHash("sha256").update(body).digest("hex");
-    expect(hash).toBe(UNLOOP_ZIP_SHA256);
-
-    assertZipListsMacApp(body, UNLOOP_APP_BUNDLE_NAME);
+    const scope = page.locator("article").filter({ has: page.locator("#showcase-unloop-title") });
+    await expect(scope.getByRole("link", { name: "Download & testing status" })).toHaveAttribute(
+      "href",
+      UNLOOP_TESTING_STATUS_URL,
+    );
+    await expect(scope.getByRole("link", { name: "Product brief" }).first()).toHaveAttribute(
+      "href",
+      UNLOOP_PRODUCT_BRIEF_URL,
+    );
+    await expect(scope.getByRole("link", { name: "Privacy & safety" })).toHaveAttribute("href", UNLOOP_PRIVACY_URL);
+    await expect(scope.getByRole("link", { name: "Public repo policy" })).toHaveAttribute(
+      "href",
+      UNLOOP_PUBLIC_POLICY_URL,
+    );
   });
 
-  test("Unloop: Projects section download link matches Showcase (same artifact URL)", async ({ page }) => {
+  test("Unloop: Projects lists documentation hub links (no macOS zip)", async ({ page }) => {
     await page.goto("/", { waitUntil: "domcontentloaded" });
     await page.getByLabel("Primary").getByRole("link", { name: "Projects", exact: true }).click();
 
-    const links = page.getByRole("link", { name: "macOS tester download (zip)" });
-    await expect(links).toHaveCount(1);
-    const href = await links.getAttribute("href");
-    expect(href).toBe(UNLOOP_ZIP_URL);
+    const projects = page.locator("#projects");
+    const status = projects.getByRole("link", { name: "Download & testing status" });
+    await expect(status).toHaveCount(1);
+    await expect(status).toHaveAttribute("href", UNLOOP_TESTING_STATUS_URL);
+    await expect(projects.getByRole("link", { name: "Privacy & safety" })).toHaveAttribute("href", UNLOOP_PRIVACY_URL);
   });
 });
