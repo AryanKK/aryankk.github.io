@@ -661,6 +661,21 @@ main {
   text-decoration: underline;
 }
 
+.project-download-hint {
+  margin: -0.5rem 0 1.25rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.project-download-hint code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+
 .skills-grid {
   display: grid;
   gap: 1.5rem;

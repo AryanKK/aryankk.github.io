@@ -2,8 +2,9 @@ import { createHash } from "node:crypto";
 import { test, expect } from "@playwright/test";
 import { assertZipListsMacApp } from "./zip-assertions";
 
+/** Canonical download URL (redirects to raw.githubusercontent.com; same bytes as manifest). */
 const UNLOOP_ZIP_URL =
-  "https://raw.githubusercontent.com/AryanKK/Unloop-Application/main/downloads/macos/unloop-desktop-macos-test.zip";
+  "https://github.com/AryanKK/Unloop-Application/raw/main/downloads/macos/unloop-desktop-macos-test.zip";
 const UNLOOP_ZIP_SHA256 =
   "a210d0804b74fd2e7aeebe0bdf83d396155d804310c3d3cb539904abdfce4103";
 /** From docs/TESTING_DOWNLOADS.md in Unloop-Application */
