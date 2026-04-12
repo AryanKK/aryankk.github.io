@@ -113,8 +113,7 @@ I care about shipping products that translate research and AI into reliable user
 --- Education ---
 University of Washington
 Seattle, WA · B.S. Computer Science · GPA 3.8 · Expected June 2027
-PHIL coursework in progress; minor declaration filed this quarter (transparent on
-the site until SIS reflects it).
+PHIL coursework in progress; minor declaration planned this quarter
 Coursework: Software Design & Implementation, Machine Learning, Natural Language Processing (NLP), Computer Security, Data Science in the Humanities
 
 --- Experience ---

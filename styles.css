@@ -485,13 +485,6 @@ main {
   color: var(--text-muted);
 }
 
-.edu-minor {
-  margin: 0.5rem 0 0;
-  font-size: 0.9375rem;
-  color: var(--text-muted);
-  font-style: italic;
-}
-
 .edu-label {
   margin: 0 0 0.35rem;
   font-size: 0.75rem;
