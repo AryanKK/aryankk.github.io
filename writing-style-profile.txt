@@ -47,7 +47,7 @@ generic assistant prose.
   r u, imo, def (see 4c).
 
 4) SEMI-FORMAL INTRO (YOUR WORDS, KEEP AS REFERENCE)
-"A little bit about me: I'm a second year CS and PHIL student. Last summer I was a SWE Intern in Oracle Health and AI. This summer I will be a Product Manager Intern at Databricks. Feel free to ask me any questions in this gc or DM.
+"A little bit about me: I'm a second year CS and PHIL student. Last summer I was a SWE Intern in Oracle Health and AI. This summer I'm an incoming product management intern. Feel free to ask me any questions in this gc or DM.
 I also have been part of communities like Dubhacks Next and have taken a wide variety of CS courses, so if you have any questions about EC's and classes ask them as well!"
 
 4b) PROFESSIONAL EMAIL STYLE (FROM YOUR REDACTED MESSAGE, STRUCTURE ONLY)
@@ -105,10 +105,10 @@ Notes for assistants:
 
 5) RESUME COMPONENTS (COPIED INTACT FROM YOUR SITE / SOURCE RESUME)
 --- Identity / headline (site hero) ---
-B.S. Computer Science at the University of Washington (expected June 2027). Incoming Product Management Intern at Databricks; previously Software Engineering Intern at Oracle Health & AI.
+B.S. Computer Science at the University of Washington (expected June 2027). Incoming product management intern; previously Software Engineering Intern at Oracle Health & AI.
 
 --- About (site) ---
-I care about shipping products that translate research and AI into reliable user value, especially in healthcare, developer tooling, and behavioral-health tech. My background spans NLP and agentic systems, full-stack delivery, and product definition from discovery through launch.
+I care about shipping products that translate research and AI into reliable user value, especially in healthcare, developer tooling, and behavioral-health tech. My background spans NLP and agentic systems, full-stack delivery, and product definition from discovery through launch. I'm an incoming product management intern for summer 2026.
 
 --- Education ---
 University of Washington
@@ -118,7 +118,7 @@ the site until SIS reflects it).
 Coursework: Software Design & Implementation, Machine Learning, Natural Language Processing (NLP), Computer Security, Data Science in the Humanities
 
 --- Experience ---
-Databricks | Product Management Intern (Incoming) | June 2026 to Sep 2026 · Bellevue, WA
+Incoming Product Management Intern | Summer 2026
 
 Oracle, Oracle Health & Artificial Intelligence | Software Engineering Intern | June 2025 to Sep 2025 · Seattle, WA
 • Scoped and shipped an NLP-powered search product over 30,000+ healthcare client management entities. Defined requirements, evaluated AI approaches, and delivered OCI GenAI Agents enabling natural language querying over structured clinical records without requiring SQL from end users.
