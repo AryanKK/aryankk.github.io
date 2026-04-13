@@ -106,14 +106,15 @@ main {
   position: fixed;
   bottom: max(1rem, env(safe-area-inset-bottom, 0px));
   right: max(1rem, env(safe-area-inset-right, 0px));
-  z-index: 30;
+  z-index: 80;
   pointer-events: none;
   line-height: 0;
 }
 
 .corner-cat img {
   display: block;
-  width: min(4.5rem, 20vw);
+  width: min(6.5rem, 28vw);
+  max-width: 120px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
