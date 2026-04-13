@@ -754,6 +754,16 @@ main {
   text-decoration: underline;
 }
 
+.linkedin-embed-wrap {
+  margin-top: 1.75rem;
+  max-width: 100%;
+}
+
+.linkedin-embed-wrap .LI-profile-badge {
+  display: inline-block;
+  vertical-align: top;
+}
+
 .site-footer {
   max-width: var(--max);
   margin: 0 auto;
