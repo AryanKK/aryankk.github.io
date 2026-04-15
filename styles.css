@@ -103,13 +103,13 @@ main {
 }
 
 .hero {
-  padding: clamp(3rem, 12vw, 7rem) 0 clamp(4rem, 10vw, 6rem);
+  padding: clamp(3rem, 12vw, 7rem) 0 clamp(2.75rem, 7vw, 4.5rem);
 }
 
 .hero-layout {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.35rem;
   align-items: flex-start;
 }
 
@@ -117,7 +117,7 @@ main {
   .hero-layout {
     flex-direction: row;
     align-items: center;
-    gap: clamp(2rem, 5vw, 3.5rem);
+    gap: clamp(1.15rem, 2.2vw, 1.75rem);
   }
 }
 
@@ -236,6 +236,10 @@ main {
   border-top: 1px solid var(--border);
 }
 
+#about.section {
+  padding-top: 2.25rem;
+}
+
 .section-alt {
   margin: 0 calc(-1 * var(--space));
   padding-left: var(--space);
@@ -275,7 +279,7 @@ main {
 
 .showcase-section {
   margin: 0 calc(-1 * var(--space));
-  padding: 3rem var(--space);
+  padding: 2.25rem var(--space) 3rem;
   background: linear-gradient(165deg, var(--bg-elevated) 0%, color-mix(in srgb, var(--bg-elevated) 88%, var(--accent)) 100%);
   border: 1px solid var(--border);
   border-radius: var(--radius);
