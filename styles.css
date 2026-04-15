@@ -113,14 +113,6 @@ main {
   align-items: flex-start;
 }
 
-@media (min-width: 880px) {
-  .hero-layout {
-    flex-direction: row;
-    align-items: center;
-    gap: clamp(1.15rem, 2.2vw, 1.75rem);
-  }
-}
-
 .hero-copy {
   flex: 1;
   min-width: 0;
@@ -142,6 +134,19 @@ main {
 }
 
 @media (min-width: 880px) {
+  .hero-layout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  /* Keep copy column from growing (flex:1) so the portrait sits beside the text. */
+  .hero-copy {
+    flex: 0 1 min(36rem, 58%);
+    min-width: 0;
+  }
+
   .hero-profile {
     width: min(220px, 26vw);
     max-width: 260px;
@@ -236,10 +241,6 @@ main {
   border-top: 1px solid var(--border);
 }
 
-#about.section {
-  padding-top: 2.25rem;
-}
-
 .section-alt {
   margin: 0 calc(-1 * var(--space));
   padding-left: var(--space);
@@ -279,7 +280,7 @@ main {
 
 .showcase-section {
   margin: 0 calc(-1 * var(--space));
-  padding: 2.25rem var(--space) 3rem;
+  padding: 3rem var(--space);
   background: linear-gradient(165deg, var(--bg-elevated) 0%, color-mix(in srgb, var(--bg-elevated) 88%, var(--accent)) 100%);
   border: 1px solid var(--border);
   border-radius: var(--radius);
